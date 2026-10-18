@@ -1,9 +1,9 @@
-# anthropic-zai-proxy
+# anthropic-openai-proxy
 
 A small translator between **Anthropic agents** (such as Claude Code) and **models that speak the OpenAI format**.
 
 ```text
-Claude Code ──▶ anthropic-zai-proxy ──▶ OpenAI-compatible model
+Claude Code ──▶ anthropic-openai-proxy ──▶ OpenAI-compatible model
  (Anthropic)       (translator)            (your provider)
 ```
 
@@ -14,12 +14,12 @@ The agent thinks it is talking to Anthropic. The model thinks it is talking to a
 You only need [Go](https://go.dev/dl/) (the minimum version is in `go.mod`). There are no other dependencies.
 
 ```bash
-git clone https://github.com/<your-username>/anthropic-zai-proxy.git
-cd anthropic-zai-proxy
-go build -o anthropic-zai-proxy .
+git clone https://github.com/ALiAL-Qaisi/anthropic-openai-proxy.git
+cd anthropic-openai-proxy
+go build -o anthropic-openai-proxy .
 ```
 
-On Windows, use `-o anthropic-zai-proxy.exe` instead.
+On Windows, use `-o anthropic-openai-proxy.exe` instead.
 
 Prefer not to build? `go run .` compiles and starts it in one step.
 
@@ -42,7 +42,7 @@ The proxy is configured **only with environment variables**.
 For one run only:
 
 ```bash
-UPSTREAM_API_KEY="your-key" UPSTREAM_MODEL="your-model" ./anthropic-zai-proxy
+UPSTREAM_API_KEY="your-key" UPSTREAM_MODEL="your-model" ./anthropic-openai-proxy
 ```
 
 For the whole terminal session:
@@ -94,10 +94,10 @@ Check your provider's documentation for its exact base URL and model names.
 ## Run
 
 ```bash
-./anthropic-zai-proxy
+./anthropic-openai-proxy
 ```
 
-On Windows: `.\anthropic-zai-proxy.exe`. Leave it running in its own terminal.
+On Windows: `.\anthropic-openai-proxy.exe`. Leave it running in its own terminal.
 
 On startup it prints the settings it picked up, so you can confirm your variables were applied:
 
