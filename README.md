@@ -102,7 +102,7 @@ On Windows: `.\anthropic-openai-proxy.exe`. Leave it running in its own terminal
 On startup it prints the settings it picked up, so you can confirm your variables were applied:
 
 ```text
-anthropic-zai-proxy listening on http://localhost:9090
+anthropic-openai-proxy listening on http://localhost:9090
   upstream : https://api.z.ai/api/paas/v4/chat/completions
   model    : glm-4.7-flash (forced on every request)
   api key  : present (N chars, never logged)
